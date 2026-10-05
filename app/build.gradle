@@ -1,0 +1,36 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.wengu.app'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.wengu.app'
+        minSdk 26
+        targetSdk 35
+        versionCode 4
+        versionName '0.3.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    signingConfigs {
+        personal {
+            def propertiesFile = rootProject.file('.tools/signing.properties')
+            if (propertiesFile.exists()) {
+                def signingProperties = new Properties()
+                propertiesFile.withInputStream { signingProperties.load(it) }
+                storeFile rootProject.file('.tools/wengu.jks')
+                storePassword signingProperties['storePassword']
+                keyAlias 'wengu'
+                keyPassword signingProperties['keyPassword']
+            }
+        }
+    }
+    buildTypes { release { minifyEnabled false; signingConfig signingConfigs.personal } }
+    testOptions { unitTests.includeAndroidResources = true }
+}
+dependencies {
+    implementation 'androidx.work:work-runtime:2.10.5'
+    implementation 'androidx.exifinterface:exifinterface:1.4.2'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.16'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+}

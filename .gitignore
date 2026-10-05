@@ -1,25 +1,20 @@
-# Android / Gradle generated files
+# Local tools, signing material and machine configuration
+.tools/
+.work/
 .gradle/
-build/
-**/build/
-.externalNativeBuild/
-.cxx/
-
-# Machine-specific files
-local.properties
 .idea/
+**/build/
+local.properties
 *.iml
-.DS_Store
-Thumbs.db
-
-# Local environment and signing material
-.env
-.env.*
-!.env.example
 *.jks
 *.keystore
 keystore.properties
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
 
-# Compiled packages are distributed through Releases
+# APKs are published through GitHub Releases
 *.apk
 *.aab

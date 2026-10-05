@@ -1,0 +1,22 @@
+温故内置图片壁纸
+
+使用内置 image_gen 工具生成三张原创图片，未使用 CLI/API 替代。
+原图保存在本目录，作为 APK 内置资源，不依赖联网。
+
+水墨山景：ink-mountains.png，浅色水墨山景与宣纸纹理。
+纸艺晨光：paper-dawn.png，暖桃色层叠纸艺与晨光。
+夜色极光：aurora-night.png，深蓝夜空与绿色极光、静谧水面。
+三者均无固定文字；经验总结由应用动态绘制，文字区域留白。
+
+最终生成提示词：
+Use case: stylized-concept. Asset type: built-in Android portrait phone wallpaper for a personal reflection app. Generate one complete 1440x3200 portrait image (9:20), no mockup or frame. Primary request: serene contemporary Chinese ink-wash landscape, layered misty blue-green mountains and a small pine grove along the bottom edge, delicate rice-paper texture, pale ivory sky, restrained jade accents. Composition: upper 30% nearly empty soft sky for the lock-screen clock; middle 35–70% is broad uninterrupted luminous mist for app-rendered Chinese sentences; mountain detail concentrated at lower quarter and far sides, calm spacious silhouette. Painterly authentic ink wash with subtle detail, refined and quiet. No words, calligraphy, logos, watermark, people or borders. The app adds its own dynamic text later.
+
+Use case: stylized-concept. Asset type: built-in Android portrait phone wallpaper for a personal reflection app. Generate one complete 1440x3200 portrait image (9:20), no mockup or frame. Primary request: refined tactile paper-cut sculpture landscape, warm peach and terracotta layered hills, tiny soft golden sun low near the bottom third, ivory handmade paper, beautiful subtle paper fibers and natural soft shadows. Modern minimal editorial paper art, several curved layers gathering in the bottom quarter and outside edges, broad uncluttered pale peach air in upper 30% and middle 35–70% for a clock and app-rendered sentences. Soft warm morning light, dimensional rather than a flat gradient, calm inviting aesthetic. No text, logos, watermark, people or borders. The app adds its own dynamic text later.
+
+Use case: photorealistic-natural. Asset type: built-in Android portrait phone wallpaper for a personal reflection app. Generate one complete 1440x3200 portrait image (9:20), no mockup or frame. Primary request: a tranquil cinematic night landscape with deep navy sky and soft emerald aurora, a still fjord reflecting a narrow aurora glow, distant black mountain silhouettes near the bottom 20%, realistic subdued fine stars. Composition: soft aurora arcs toward the top and far side edges; middle 35–70% is uninterrupted dark blue sky with very few stars so the app can render a white Chinese sentence clearly; upper clock zone remains low contrast; horizon below 75%. Rich dark tones, understated northern light, realistic photography, no text, people, logos, watermark or borders. The app adds its own dynamic text later.
+
+保存位置与尺寸：
+三张原图均保存在本文件所在的 app/src/main/assets/wallpapers 目录，并随 APK 离线分发。
+实际生成尺寸均为 841×1870 像素；提示词中的 1440×3200 为期望规格，工具实际返回尺寸如上。
+应用按手机屏幕尺寸居中裁切背景，经验文字在输出壁纸尺寸下重新绘制。
+交付素材包：deliverables/内置壁纸与设计说明.zip。

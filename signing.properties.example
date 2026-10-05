@@ -1,0 +1,4 @@
+# Copy to .tools/signing.properties for your own release build.
+# Place your own keystore at .tools/wengu.jks; alias must be wengu.
+storePassword=YOUR_OWN_KEYSTORE_PASSWORD
+keyPassword=YOUR_OWN_KEY_PASSWORD
